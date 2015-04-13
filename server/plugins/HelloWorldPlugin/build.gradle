@@ -1,12 +1,8 @@
 apply plugin: 'java'
-apply plugin: 'application'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 version = '1.0'
-
-mainClassName = 'net.canarymod.Main'
-applicationDefaultJvmArgs = ['-Xms1024M', '-Xmx1024M']
 
 repositories {
     maven{

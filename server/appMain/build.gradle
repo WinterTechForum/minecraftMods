@@ -1,1 +1,37 @@
 apply plugin: 'application'
+apply plugin: 'wrapper'
+
+version = '1.0'
+
+mainClassName = 'net.canarymod.Main'
+applicationDefaultJvmArgs = ['-Xms1024M', '-Xmx1024M']
+
+repositories {
+    maven{
+        name 'canaryMod'
+        url "http://repo.visualillusionsent.net/repository/public"
+    }
+
+    mavenCentral()
+}
+
+configurations{
+    plugin
+    plugin.exclude group: 'net.canarymod'
+}
+
+dependencies {
+    compile group: 'net.canarymod', name: 'CanaryMod', version:'1.8.0-1.2.0', classifier: 'shaded', transitive: false
+
+    plugin project(':plugins:HelloWorldPlugin')
+
+}
+
+task addPlugins(type: Copy){
+    into "$buildDir/plugins"
+    from configurations.plugin
+}
+
+applicationDistribution.from(addPlugins){
+    into "plugins"
+}
