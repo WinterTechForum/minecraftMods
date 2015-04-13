@@ -1,0 +1,13 @@
+
+.idea
+.gradle
+build
+HelloWorldPlugin.iml
+config
+db
+dbadapters
+logs
+pluginlangs
+worlds
+usercache.json
+lang

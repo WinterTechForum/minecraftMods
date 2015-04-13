@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+version = '1.0'
+
+mainClassName = 'net.canarymod.Main'
+applicationDefaultJvmArgs = ['-Xms1024M', '-Xmx1024M']
+
+repositories {
+    maven{
+        name 'canaryMod'
+        url "http://repo.visualillusionsent.net/repository/public"
+    }
+
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'net.canarymod', name: 'CanaryMod', version:'1.8.0-1.2.0', classifier: 'shaded', transitive: false
+    testCompile 'junit:junit:4.11'
+}
