@@ -24,4 +24,12 @@ To add a plugin, do the following:
 2. Add the project to `server\settings.gradle`
 3. Add the project as a dependency to this project's `build.gradle` file using the `plugin` configuration.
 
+Running the Application
+--------------
+
+At present, the `run` target of the Gradle Application plugin will not work.  To run the server, run `gradlew install`.  This creates a distribution in `build/install/appMain`.  From `build/install/appMain` run `bin/appMain`.  The server will start, read the eula.txt in the directory and look for plugins in the `plugins` sub-directory.  
+
+**Note:** You must be in the "root" (e.g. `build/install/appMain`) directory for the app to run properly.  
+
+
 [CanaryMod]: http://canarymod.net/

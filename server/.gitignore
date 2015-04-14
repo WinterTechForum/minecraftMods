@@ -3,3 +3,4 @@
 *.iml
 **/.idea
 appMain/gradle.properties
+appMain/eula.txt
