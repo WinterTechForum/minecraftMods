@@ -32,6 +32,30 @@ task addPlugins(type: Copy){
     from configurations.plugin
 }
 
+task addEula{
+    def eulaDir = file("$buildDir/eula")
+    outputs.dir eulaDir
+
+    doLast{
+        eulaDir.mkdirs()
+        def prop = new Properties()
+        println "eulaAgree exists? "+project.hasProperty("eulaAgree")
+        if(project.hasProperty("eulaAgree")){
+            prop.setProperty("eula", project.eulaAgree)
+        } else{
+            prop.setProperty("eula", "false")
+        }
+
+        def propFile = new File(eulaDir, "eula.txt")
+        propFile.createNewFile()
+        prop.store(propFile.newWriter(), null)
+    }
+}
+
 applicationDistribution.from(addPlugins){
     into "plugins"
+}
+
+applicationDistribution.from(addEula){
+
 }
