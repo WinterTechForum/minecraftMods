@@ -1,0 +1,3 @@
+# Set eulaAgree to true to agree to the Minecraft EULA.
+# This will generate eula.txt in the final build.
+eulaAgree=false
