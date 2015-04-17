@@ -1,0 +1,5 @@
+main-class = org.wintertech.lavabomb.LavaBombPlugin
+name = WinterTech LavaBomb Plugin
+version = 1.0.0
+author = Winter Tech Team
+language = java

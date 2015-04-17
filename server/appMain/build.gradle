@@ -24,6 +24,7 @@ dependencies {
     compile group: 'net.canarymod', name: 'CanaryMod', version:'1.8.0-1.2.0', classifier: 'shaded', transitive: false
 
     plugin project(':plugins:HelloWorldPlugin')
+    plugin project(':plugins:LavaBombPlugin')
 
 }
 

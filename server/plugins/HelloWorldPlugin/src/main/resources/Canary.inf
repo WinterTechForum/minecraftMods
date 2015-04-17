@@ -1,5 +1,5 @@
 main-class = org.wintertech.hello.HelloWorldPlugin
 name = WinterTech Hello World
 version = 1.0.0
-author = Winter Tech Attendees
+author = Winter Tech Team
 language = java
