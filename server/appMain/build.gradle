@@ -25,6 +25,7 @@ dependencies {
 
     plugin project(':plugins:HelloWorldPlugin')
     plugin project(':plugins:LavaBombPlugin')
+    plugin project(':plugins:HardModePlugin')
 
 }
 
