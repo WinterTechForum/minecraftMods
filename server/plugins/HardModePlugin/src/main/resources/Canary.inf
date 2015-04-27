@@ -1,0 +1,5 @@
+main-class = org.wintertech.hardmode.HardMode
+name = WinterTech HardMode Plugin
+version = 1.0.0
+author = Winter Tech Team
+language = java

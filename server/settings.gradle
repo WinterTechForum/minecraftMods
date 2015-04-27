@@ -1,2 +1,2 @@
-include 'appMain', 'plugins:HelloWorldPlugin', 'plugins:LavaBombPlugin'
+include 'appMain', 'plugins:HelloWorldPlugin', 'plugins:LavaBombPlugin', 'plugins:HardModePlugin'
 
