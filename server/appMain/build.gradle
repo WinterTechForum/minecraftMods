@@ -1,19 +1,10 @@
 apply plugin: 'application'
-apply plugin: 'wrapper'
 
 version = '1.0'
 
+// application configuration items.
 mainClassName = 'net.canarymod.Main'
 applicationDefaultJvmArgs = ['-Xms1024M', '-Xmx1024M']
-
-repositories {
-    maven{
-        name 'canaryMod'
-        url "http://repo.visualillusionsent.net/repository/public"
-    }
-
-    mavenCentral()
-}
 
 configurations{
     plugin
@@ -21,7 +12,6 @@ configurations{
 }
 
 dependencies {
-    compile group: 'net.canarymod', name: 'CanaryMod', version:'1.8.0-1.2.0', classifier: 'shaded', transitive: false
 
     plugin project(':plugins:HelloWorldPlugin')
     plugin project(':plugins:LavaBombPlugin')
@@ -54,10 +44,11 @@ task addEula{
     }
 }
 
+// place the plugins in the plugins directory
 applicationDistribution.from(addPlugins){
     into "plugins"
 }
 
+// generate the EULA in the top-level directory
 applicationDistribution.from(addEula){
-
 }

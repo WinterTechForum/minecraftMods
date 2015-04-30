@@ -23,4 +23,9 @@ public class HardMode extends Plugin
         getLogman().info("Authored by " + getAuthor());
         return true;
     }
+
+    @Override
+    public void disable() {
+
+    }
 }
