@@ -1,0 +1,24 @@
+apply plugin: 'wrapper'
+
+subprojects{
+    apply plugin: 'java'
+    apply plugin: 'wrapper'
+    group = "org.wintertech"
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories{
+        maven{
+            name 'canaryMod'
+            url "http://repo.visualillusionsent.net/repository/public"
+        }
+
+        mavenCentral()
+    }
+
+    dependencies{
+        compile group: 'net.canarymod', name: 'CanaryMod', version:'1.8.0-1.2.0', classifier: 'shaded', transitive: false
+    }
+
+}
